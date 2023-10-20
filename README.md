@@ -27,7 +27,7 @@ Composer
 * Go to your Magento root folder
 * Run composer command:
 ```sh
-composer require chernandez/magento2-mipago
+composer require chernandez/magento2-mipago:dev-main
 ```
 ### Manual Installation
 * Extract files from ChernandezMiPago.zip archive
