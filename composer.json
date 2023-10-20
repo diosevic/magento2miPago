@@ -1,0 +1,29 @@
+{
+  "name": "chernandez/magento2-mipago",
+  "description": "MiPago. Magento 2 module - code challenge",
+  "require": {
+    "php": ">=7.3",
+    "magento/magento-composer-installer": "*",
+    "magento/magento2-base": "~2.1|~2.2"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "type": "magento2-module",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "César Hernández",
+      "email": "cesarhndev@gmail.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Chernandez\\MiPago\\": ""
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Chernandez_MiPago
+ *
+ * @category  Chernandez
+ * @package   Chernandez_MiPago
+ * @copyright Copyright © 2023. All rights reserved.
+ * @author    cesarhndev@gmail.com
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="mipago_payment_config_provider" xsi:type="object">Chernandez\MiPago\Model\Config\MiPagoSettings</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="extracharge_config_provider" xsi:type="object">Chernandez\MiPago\Model\Config\ExtraChargeSettings</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Chernandez_MiPago
+ *
+ * @category  Chernandez
+ * @package   Chernandez_MiPago
+ * @copyright Copyright © 2023. All rights reserved.
+ * @author    cesarhndev@gmail.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="mipago" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Mi Pago</label>
+                <field id="active" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Enable payment method be displayed in checkout.
+                    </comment>
+                </field>
+                <field id="title" translate="label comment" sortOrder="2" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment Label</label>
+                    <validate>required-entry validate-length maximum-length-32</validate>
+                    <comment>
+                        This is the label you will display for this payment method in the checkout
+                    </comment>
+                </field>
+                <field id="enable_extracharge" translate="label comment" sortOrder="3" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable Extra charge for this payment</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        Enable extra charge for this payment method
+                    </comment>
+                </field>
+                <field id="extracharge_amount" translate="label comment" sortOrder="4" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment extra charge</label>
+                    <depends>
+                        <field id="enable_extracharge">1</field>
+                    </depends>
+                    <comment>
+                        This is the extra cost added to the order when selecting this payment method. (Min 0 / Max 100)
+                    </comment>
+                    <validate>required-entry validate-number validate-number-range number-range-1-100</validate>
+                </field>
+                <field id="extracharge_label" translate="label comment" sortOrder="5" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Extra Charge Label</label>
+                    <validate>required-entry validate-length maximum-length-32</validate>
+                    <depends>
+                        <field id="enable_extracharge">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

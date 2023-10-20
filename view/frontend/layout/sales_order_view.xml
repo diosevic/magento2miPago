@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Chernandez_MiPago
+ *
+ * @category  Chernandez
+ * @package   Chernandez_MiPago
+ * @copyright Copyright © 2023. All rights reserved.
+ * @author    cesarhndev@gmail.com
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="order_totals">
+            <block class="Chernandez\MiPago\Block\Sales\ExtrachargeTotals" name="extracharge_totals" />
+        </referenceContainer>
+    </body>
+</page>
