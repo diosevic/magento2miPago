@@ -27,7 +27,7 @@ Composer
 * Go to your Magento root folder
 * Run composer command:
 ```sh
-composer require facebook/facebook-for-magento2
+composer require chernandez/magento2-mipago
 ```
 ### Manual Installation
 * Extract files from ChernandezMiPago.zip archive
@@ -41,8 +41,7 @@ composer require facebook/facebook-for-magento2
 * Go to Magento root folder
 
 ###  Enable Extension Using Magento CLI
-Execute the following commands to manually install Facebook Business Extension.
-- Execute 
+Execute the following commands to manually install Chernandez_MiPago
    ```sh
   bin/magento module:status
    ``` 
